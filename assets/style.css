@@ -1,0 +1,46 @@
+/* carousel icons */
+.scroll-container {
+    overflow: hidden;
+    margin: 20px 0;
+    position: relative;
+    width: 100%;
+}
+
+.scroll-left, .scroll-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: calc(150px * 26); /* 13 icônes x 2 pour la répétition */
+}
+
+.scroll-left {
+    animation: scrollLeft 30s linear infinite;
+}
+
+.scroll-right {
+    animation: scrollRight 30s linear infinite;
+}
+
+.logo-slide {
+    flex: 0 0 120px;
+    width: 120px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-slide img {
+    height: 3.0rem;
+    width: auto;
+}
+
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-150px * 13)); } /* Défilement sur la longueur de 13 icônes */
+}
+
+@keyframes scrollRight {
+    0% { transform: translateX(calc(-150px * 13)); } /* Défilement sur la longueur de 13 icônes */
+    100% { transform: translateX(0); }
+}

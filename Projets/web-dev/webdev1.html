@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>LearnlinkHub - Détails du projet</title>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Bouton Retour -->
+        <a href="../../index.html#projets" class="inline-flex items-center text-gray-600 mb-8 hover:text-[#007bff] transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Retour aux projets
+        </a>
+
+        <!-- Contenu du projet -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="p-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- Vidéo/Image du projet -->
+                    <div class="md:w-1/2 space-y-4">
+                        <img 
+                            src="../../assets/images/devllb.png" 
+                            alt="Aperçu de Task Manager" 
+                            class="w-full h-auto rounded-lg shadow-lg"
+                        >
+                        <iframe 
+                            class="w-full h-[300px] rounded-lg shadow-lg" 
+                            src="https://youtu.be/F_opjHDE64Q" 
+                            title="Task Manager Demo"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+
+                    <!-- Informations du projet -->
+                    <div class="md:w-1/2">
+                        <h1 class="text-3xl font-bold text-[#007bff] mb-4">LearnlinkHub : Plateforme E-learning</h1>
+                        <div class="mb-6">
+                            <p class="text-gray-600 text-sm mb-4">LearnlinkHub est une plateforme de formation en ligne innovante développée pour faciliter l'apprentissage à distance. Cette application web permet aux formateurs de créer et gérer leurs cours, aux apprenants de suivre des formations interactives, et aux administrateurs de superviser l'ensemble des activités pédagogiques.</p>
+                            <p class="text-gray-600 text-sm mb-4">Le projet intègre des fonctionnalités avancées telles que la gestion des rôles utilisateurs, le suivi des progressions, le partage de ressources pédagogiques, et un système de notifications en temps réel pour une expérience d'apprentissage optimale.</p>
+                        </div>
+
+                        <!-- Technologies utilisées -->
+                        <div class="mb-6">
+                            <h2 class="text-xl font-semibold mb-3">Technologies utilisées</h2>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600">Laravel 12</span>
+                                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600">MySQL</span>
+                                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600">PHP 8</span>
+                                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600">Tailwind CSS</span>
+                                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600">Alpine.js</span>
+                                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600">Blade</span>
+                                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600">Laravel Breeze</span>
+                            </div>
+                        </div>
+
+                        <!-- Lien vers GitHub -->
+                        <a href="https://github.com/Marcel-yt/LearnlinkHub-projet-fil-rouge" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-6 py-2 rounded-full transition-colors">
+                            Consulter le dépôt GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio Marcel YAMI</title>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed top-0 left-0 w-full z-50 py-2">
+        <div class="container mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex justify-between items-center w-full md:w-auto">
+                <img src="assets/images/Logo.png" alt="Logo Marcel YAMI" class="h-12 w-auto">
+                <!-- Menu mobile button -->
+                <button class="md:hidden text-gray-700" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation links -->
+            <div class="hidden md:flex items-center justify-center flex-grow">
+                <div class="flex space-x-6">
+                    <a href="#accueil" class="text-sm text-gray-700 hover:text-[#ff6636]">Accueil</a>
+                    <a href="#apropos" class="text-sm text-gray-700 hover:text-[#ff6636]">A Propos</a>
+                    <a href="#competences" class="text-sm text-gray-700 hover:text-[#ff6636]">Compétences</a>
+                    <a href="#projets" class="text-sm text-gray-700 hover:text-[#ff6636]">Projets</a>
+                    <a href="#contact" class="text-sm text-gray-700 hover:text-[#ff6636]">Contact</a>
+                </div>
+            </div>
+
+            <!-- Download CV button -->
+            <div class="hidden md:block">
+                <a href="assets/documents/CV Marcel YAMI.pdf" download class="bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md">
+                    Télécharger mon CV
+                </a>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="hidden w-full md:hidden absolute top-full left-0 bg-white shadow-lg" id="mobile-menu">
+                <div class="flex flex-col items-center space-y-2 py-4">
+                    <a href="#accueil" class="text-sm text-gray-700 hover:text-[#ff6636]">Accueil</a>
+                    <a href="#apropos" class="text-sm text-gray-700 hover:text-[#ff6636]">A Propos</a>
+                    <a href="#competences" class="text-sm text-gray-700 hover:text-[#ff6636]">Compétences</a>
+                    <a href="#projets" class="text-sm text-gray-700 hover:text-[#ff6636]">Projets</a>
+                    <a href="#contact" class="text-sm text-gray-700 hover:text-[#ff6636]">Contact</a>
+                    <a href="assets/documents/CV Marcel YAMI.pdf" download class="bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md">
+                        Télécharger mon CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 sm:px-10 pt-16">
+        <!-- Section d'accueil -->
+        <section id="accueil" class="min-h-[calc(100vh-7rem)] bg-[#007bff] -mx-4 py-12 sm:-mx-10 px-4 sm:px-10">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="max-w-xl w-full md:w-1/2">
+                    <p class="text-xl text-white mb-2">Salut 👋, je suis</p>
+                    <h1 class="text-2xl text-white sm:text-4xl font-bold mb-4">Marcel YAMI TIENTCHEU</h1>
+                    <div class="inline-block border border-white rounded-full px-4 py-1 sm:px-6 sm:py-2 mb-4">
+                        <div class="carousel-wrapper h-10 overflow-hidden">
+                            <div class="carousel-content transition-transform duration-500">
+                                <div class="text-base sm:text-xl text-[#ffc500] font-bold h-10 flex items-center justify-center">UX / UI Product Designer</div>
+                                <div class="text-base sm:text-xl text-[#ffc500] font-bold h-10 flex items-center justify-center">Graphic Designer</div>
+                                <div class="text-base sm:text-xl text-[#ffc500] font-bold h-10 flex items-center justify-center">Full Stack Web Developer</div>
+                            </div>
+                        </div>
+                    </div>                  
+                    <p class="text-white text-sm sm:text-base mb-6">Passionné par la création d'expériences visuelles et interactives, j'allie design et technologie pour concevoir des solutions intuitives, esthétiques et performantes. Travaillons ensemble pour donner vie à vos idées !</p>
+                    <a href="#contact" class="inline-block bg-[#ff6636] hover:bg-[#0056b3] text-white text-xs sm:text-sm px-6 sm:px-8 py-2 sm:py-3 rounded-lg transition duration-300">
+                        Me contacter
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center items-center relative">
+                    <img src="assets/images/profile.png" alt="Marcel YAMI" class="w-48 sm:w-64 h-auto rounded-lg">
+                    <!-- Barre verticale de réseaux sociaux -->
+                    <div class="hidden md:flex flex-col items-center gap-4 absolute -right-2 mt-16">
+                        <p class="text-white text-sm transform rotate-90 mb-8">Trouvez-moi sur</p>
+                        
+                        <a href="https://github.com/Marcel-yt" class="text-white hover:text-[#ff6636] transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/marcel-yami-tientcheu" class="text-white hover:text-[#ff6636] transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/237656585444" class="text-white hover:text-[#ff6636] transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M20.472 3.528C18.208 1.264 15.208 0 12 0 5.488 0 0 5.488 0 12c0 2.136.576 4.208 1.664 6.032L0 24l6.064-1.592c1.752.96 3.736 1.472 5.736 1.472h.048c6.512 0 12-5.488 12-12 0-3.208-1.264-6.208-3.376-8.472zM12 22.08h-.048c-1.768 0-3.504-.48-5.016-1.384l-.36-.216-3.712.976.992-3.632-.232-.376C2.592 15.776 2.064 13.92 2.064 12c0-5.472 4.464-9.936 9.984-9.936 2.688 0 5.208 1.048 7.104 2.944s2.944 4.416 2.944 7.104c0 5.52-4.488 9.968-10.096 9.968zM17.472 14.752c-.304-.152-1.784-.88-2.064-.976-.272-.096-.472-.144-.672.144-.2.288-.768.976-.944 1.176-.176.2-.352.232-.656.08-.304-.152-1.28-.472-2.44-1.504-.904-.808-1.512-1.808-1.688-2.112-.176-.304-.016-.472.136-.624.136-.136.304-.352.456-.528.152-.176.208-.304.312-.504.104-.2.048-.376-.024-.528-.072-.152-.672-1.624-.92-2.224-.24-.584-.488-.504-.672-.504-.176 0-.376-.024-.576-.024s-.528.072-.808.36c-.272.288-1.04 1.016-1.04 2.48 0 1.464 1.064 2.88 1.216 3.08.152.2 2.144 3.272 5.192 4.584.728.312 1.296.504 1.736.648.728.232 1.392.2 1.92.12.584-.08 1.784-.728 2.032-1.432.248-.704.248-1.304.176-1.432-.072-.128-.272-.208-.576-.36z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section À propos -->
+            <section id="apropos" class="py-12 bg-white -mx-4 sm:-mx-10 px-4 sm:px-10">
+                <div class="container mx-auto">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-10">À Propos de moi</h2>
+                    <div class="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
+                        <div class="w-full md:w-1/2">
+                            <p class="text-xs sm:text-sm text-gray-700 mb-4 sm:mb-6">
+                                À la base physicien et passionné par la créativité et l'innovation, mon potentiel dans les domaines du design et du développement web a été une véritable découverte enrichissante. De la conception visuelle au code, je transforme des idées en solutions concrètes et innovantes.
+                            </p>
+                            <p class="text-xs sm:text-sm text-gray-700 mb-4 sm:mb-6">
+                                Toujours en quête d'expertise, j'explore en permanence de nouvelles tendances et technologies pour concevoir des expériences utilisateur à la fois intuitives, esthétiques et performantes.
+                            </p>
+                            <p class="text-xs sm:text-sm text-gray-700 mb-6 sm:mb-8">
+                                Vous avez un projet en tête ? Parlons-en et donnons-lui vie ensemble !
+                            </p>
+                            <a href="#contact" class="inline-block bg-[#ff6636] hover:bg-[#0056b3] text-white text-xs sm:text-sm px-6 sm:px-8 py-2 sm:py-3 rounded-lg transition duration-300">
+                                Me contacter
+                            </a>
+                        </div>
+                        <div class="w-3/4 sm:w-full md:w-2/5">
+                            <img src="assets/images/illustration1.png" alt="À propos illustration" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section Compétences -->
+            <section id="competences" class="py-12 bg-[#007bff] -mx-4 sm:-mx-10 px-4 sm:px-10">
+                <div class="container mx-auto">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-center text-white mb-4 sm:mb-10">Mes Compétences</h2>
+                    <p class="text-white text-center text-sm sm:text-base mb-8 max-w-2xl mx-auto">De la conception à la réalisation, je maîtrise un large éventail d'outils et de technologies. Mon expertise en design et en développement me permet de créer des solutions complètes et innovantes, du prototype à la production.</p>
+                    
+                    <!-- Cartes de compétences -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                        <div class="bg-white p-5 rounded-lg">
+                            <div class="flex items-center gap-4 mb-">
+                                <img src="assets/images/maquette.png" alt="Web Design" class="w-10 h-10">
+                                <h3 class="text-sm text-black font-bold">Création des maquettes web et mobile</h3>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg">
+                            <div class="flex items-center gap-4 mb-">
+                                <img src="assets/images/code.png" alt="Code" class="w-10 h-10">
+                                <h3 class="text-sm text-black font-bold">Intégration web</h3>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg">
+                            <div class="flex items-center gap-4 mb-">
+                                <img src="assets/images/design.png" alt="Design" class="w-10 h-10">
+                                <h3 class="text-sm text-black font-bold">Création des identités visuelles</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logos défilants -->
+                    <div class="overflow-hidden">
+                        <!-- Première ligne -->
+                        <div class="scroll-container mb-10">
+                            <div class="scroll-left">
+                                <!-- Premier groupe -->
+                                <div class="logo-slide"><img src="assets/images/balsamiq.png" alt="Balsamiq" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/figma.png" alt="Figma" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/indesign.png" alt="InDesign" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/axd.png" alt="Adobe XD" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/illustrator.png" alt="Illustrator" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/photoshop.png" alt="Photoshop" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/blender.png" alt="Blender" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/capcut.png" alt="Sketch" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/wordpress.png" alt="Premiere Pro" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/framer.png" alt="After Effects" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/wx.png" alt="Cinema 4D" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/webflow.png" alt="Maya" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/canvas.png" alt="ZBrush" class="h-12 w-auto"></div>
+                                <!-- Répétition pour l'effet infini -->
+                                <div class="logo-slide"><img src="assets/images/balsamiq.png" alt="Balsamiq" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/figma.png" alt="Figma" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/indesign.png" alt="InDesign" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/axd.png" alt="Adobe XD" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/illustrator.png" alt="Illustrator" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/photoshop.png" alt="Photoshop" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/blender.png" alt="Blender" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/capcut.png" alt="Sketch" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/wordpress.png" alt="Premiere Pro" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/framer.png" alt="After Effects" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/wx.png" alt="Cinema 4D" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/webflow.png" alt="Maya" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/canvas.png" alt="ZBrush" class="h-12 w-auto"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Deuxième ligne -->
+                        <div class="scroll-container">
+                            <div class="scroll-right">
+                                <!-- Premier groupe -->
+                                <div class="logo-slide"><img src="assets/images/HTML.png" alt="HTML" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/css.png" alt="CSS" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/bootstrap.png" alt="Bootstrap" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/tailwind.png" alt="Tailwind" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/js.png" alt="JavaScript" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/mysql.png" alt="MySQL" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/php.png" alt="PHP" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/vscode.png" alt="React" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/git.png" alt="Vue.js" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/github.png" alt="Angular" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/trello.png" alt="Node.js" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/react.png" alt="Python" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/laravel.png" alt="Django" class="h-12 w-auto"></div>
+                                <!-- Répétition pour l'effet infini -->
+                                <div class="logo-slide"><img src="assets/images/HTML.png" alt="HTML" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/css.png" alt="CSS" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/bootstrap.png" alt="Bootstrap" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/tailwind.png" alt="Tailwind" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/js.png" alt="JavaScript" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/mysql.png" alt="MySQL" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/php.png" alt="PHP" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/vscode.png" alt="React" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/git.png" alt="Vue.js" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/github.png" alt="Angular" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/trello.png" alt="Node.js" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/react.png" alt="Python" class="h-12 w-auto"></div>
+                                <div class="logo-slide"><img src="assets/images/laravel.png" alt="Django" class="h-12 w-auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section Projets -->
+            <section id="projets" class="py-12 bg-white -mx-4 sm:-mx-10 px-4 sm:px-10">
+                <div class="container mx-auto">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-4">Mes Projets</h2>
+                    <div class="text-center mb-8">
+                        <p class="text-gray-700 text-sm sm:text-base max-w-3xl mx-auto mb-8">Explorez mes réalisations et embarquez avec moi dans ce voyage créatif ! Chaque projet est une aventure, une nouvelle façon de réinventer le digital.</p>
+                    </div>
+
+                    <!-- Filtres -->
+                    <div class="flex flex-wrap justify-center gap-4 mb-12">
+                        <button data-filter="all" class="filter-btn active px-6 py-2 text-sm border-2 border-[#007bff] rounded-full hover:bg-[#007bff] hover:text-white transition-colors">Tout</button>
+                        <button data-filter="web-dev" class="filter-btn px-6 py-2 text-sm border-2 border-[#007bff] rounded-full hover:bg-[#007bff] hover:text-white transition-colors">Web developpement</button>
+                        <button data-filter="design-web" class="filter-btn px-6 py-2 text-sm border-2 border-[#007bff] rounded-full hover:bg-[#007bff] hover:text-white transition-colors">Design web et mobile</button>
+                        <button data-filter="graphic-design" class="filter-btn px-6 py-2 text-sm border-2 border-[#007bff] rounded-full hover:bg-[#007bff] hover:text-white transition-colors">Graphic design</button>
+                    </div>
+
+                    <!-- Grille des projets -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Developpement web -->
+
+                        <!-- Projet 1 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="web-dev">
+                            <img src="assets/images/devllb.png" alt="Business Landing Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Developpement web</p>
+                                <h3 class="font-bold mb-4">LearnlinkHub: E-learning V1</h3>
+                                <a href="Projets/web-dev/webdev1.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Projet 2 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="web-dev">
+                            <img src="assets/images/Gtask.png" alt="Business Landing Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Developpement web</p>
+                                <h3 class="font-bold mb-4">Gestion des tache en équipe</h3>
+                                <a href="Projets/web-dev/webdev2.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Projet 3 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="web-dev">
+                            <img src="assets/images/GTSdev.png" alt="Business Landing Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Developpement web</p>
+                                <h3 class="font-bold mb-4">Green Tech Solution</h3>
+                                <a href="Projets/web-dev/webdev3.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Projet 4 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="web-dev">
+                            <img src="assets/images/house.png" alt="Business Landing Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Developpement web</p>
+                                <h3 class="font-bold mb-4">Location Maison</h3>
+                                <a href="Projets/web-dev/webdev4.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Projet 5 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="web-dev">
+                            <img src="assets/images/cvg dev.png" alt="Business Landing Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Developpement web</p>
+                                <h3 class="font-bold mb-4">Génerateur de CV</h3>
+                                <a href="Projets/web-dev/webdev5.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Projet 6 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="web-dev">
+                            <img src="assets/images/portfolio.png" alt="Business Landing Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Developpement web</p>
+                                <h3 class="font-bold mb-4">Portfolio</h3>
+                                <a href="Projets/web-dev/webdev6.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Design web et mobile -->
+
+                        <!-- Projet 1 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="design-web">
+                            <img src="assets/images/learn1.png" alt="AirCalling Landing Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Web Design</p>
+                                <h3 class="font-bold mb-4">LearnlinkHub: E-learning</h3>
+                                <a href="Projets/design-web/designweb1.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+                    
+                        <!-- Projet 2 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="design-web">
+                            <img src="assets/images/generator cv.png" alt="AirCalling Landing Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Web Design</p>
+                                <h3 class="font-bold mb-4">Générateur de CV</h3>
+                                <a href="Projets/design-web/designweb2.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Projet 3 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="design-web">
+                            <img src="assets/images/GTS.png" alt="AirCalling Landing Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Web Design</p>
+                                <h3 class="font-bold mb-4">Green Tech Solution</h3>
+                                <a href="Projets/design-web/designweb3.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Projet 4 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="design-web">
+                            <img src="assets/images/BoutiqueD.png" alt="AirCalling Landing Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Web Design</p>
+                                <h3 class="font-bold mb-4">Boutique Digitale</h3>
+                                <a href="Projets/design-web/designweb4.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Projet 5 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="design-web">
+                            <img src="assets/images/FoodP.png" alt="AirCalling Landing Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">App Design</p>
+                                <h3 class="font-bold mb-4">Super Marché Alimentaire</h3>
+                                <a href="Projets/design-web/designweb5.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Graphic design -->
+
+                        <!-- Projet 1 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="graphic-design">
+                            <img src="assets/images/Logos.png" alt="E-commerce Web Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Graphic Design</p>
+                                <h3 class="font-bold mb-4">Réalisation des Logos</h3>
+                                <a href="Projets/graphic-design/graphic1.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Projet 2 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="graphic-design">
+                            <img src="assets/images/FLYERS.png" alt="E-commerce Web Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Graphic Design</p>
+                                <h3 class="font-bold mb-4">Réalisation des Flyers</h3>
+                                <a href="Projets/graphic-design/graphic2.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                        <!-- Projet 3 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card" data-category="graphic-design">
+                            <img src="assets/images/" alt="E-commerce Web Page" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <p class="text-sm text-gray-600 mb-2">Graphic Design</p>
+                                <h3 class="font-bold mb-4">Réalisation des Cartes de visites</h3>
+                                <a href="Projets/graphic-design/graphic3.html" class="inline-block bg-[#007bff] hover:bg-[#0056b3] text-white text-sm px-4 py-2 rounded-md transition-colors">Détails</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    
+
+                </div>
+            </section>
+            
+            <!-- Section Contact -->
+            <section id="contact" class="py-12 bg-white -mx-4 px-4 sm:px-10">
+                <div class="container shadow-lg p-10">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-center text-black mb-4">Me Contacter</h2>
+                    <p class="text-black text-center text-sm sm:text-base mb-8 max-w-2xl mx-auto">Vous avez un projet en tête ? N'hésitez pas à me contacter. Je serai ravi d'échanger avec vous et de vous aider à concrétiser vos idées.</p>
+                    <!-- Message de confirmation -->
+                    <div id="success-message" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-6" role="alert">
+                        <strong class="font-bold">Succès!</strong>
+                        <span class="block sm:inline">Votre message a été envoyé avec succès.</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <!-- Image illustrative -->
+                        <div class="md:w-1/2">
+                            <img src="assets/images/illustration1.png" alt="Contact illustration" class="w-full h-auto rounded-lg">
+                        </div>
+
+                        <!-- Formulaire de contact -->
+                        <!-- Formulaire de contact -->
+                        <div class="md:w-1/2 w-full">
+                            <form class="space-y-6" action="https://formsubmit.co/yamitmarcel@gmail.com" method="POST" id="contact-form">
+                                <!-- Champs cachés pour FormSubmit -->
+                                <input type="hidden" name="_next" value="https://marcel-yt.github.io/Portfolio-Marcel-YAMI/?submitted=true#contact">
+                                <!-- Note : Remplacez https://marcel-yt.github.io/Portfolio-Marcel-YAMI/ dans _next par l'URL réelle de votre site une fois qu'il sera en ligne. -->
+                                <input type="hidden" name="_captcha" value="false">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-black mb-2">Nom et Prénom</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff6636] focus:border-transparent outline-none transition-colors" required>
+                                </div>
+
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-black mb-2">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff6636] focus:border-transparent outline-none transition-colors" required>
+                                </div>
+
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-black mb-2">Téléphone</label>
+                                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff6636] focus:border-transparent outline-none transition-colors">
+                                </div>
+
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium text-black mb-2">Sujet</label>
+                                    <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff6636] focus:border-transparent outline-none transition-colors" required>
+                                </div>
+
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-black mb-2">Message</label>
+                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff6636] focus:border-transparent outline-none transition-colors" required></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-[#ff6636] hover:bg-[#0056b3] text-white font-medium py-3 rounded-lg transition-colors">
+                                    Envoyer le message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <script src="assets/script.js"></script>
+    </body>
+
+    <!-- Footer -->
+    <footer class=" text-white bg-[#007bff] p-10 ">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- À propos -->
+            <div>
+                <h4 class="font-bold text-lg mb-4">À propos</h4>
+                <p class="text-sm">Designer et développeur passionné, je crée des expériences numériques innovantes et intuitives. Mon objectif est de donner vie à vos idées à travers des solutions créatives et performantes.</p>
+                <img src="assets/images/Logo.png" alt="Logo Marcel YAMI" class="h-24 w-auto bg-white rounded-lg mt-4">
+            </div>
+
+            <!-- Navigation rapide -->
+            <div>
+                <h4 class="font-bold text-lg mb-4">Navigation rapide</h4>
+                <ul class="space-y-2">
+                    <li><a href="#accueil" class="text-sm hover:text-[#ff6636] transition-colors">Accueil</a></li>
+                    <li><a href="#apropos" class="text-sm hover:text-[#ff6636] transition-colors">À propos</a></li>
+                    <li><a href="#competences" class="text-sm hover:text-[#ff6636] transition-colors">Compétences</a></li>
+                    <li><a href="#projets" class="text-sm hover:text-[#ff6636] transition-colors">Projets</a></li>
+                    <li><a href="#contact" class="text-sm hover:text-[#ff6636] transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <ul class="space-y-2">
+                    <li class="text-sm">📧 yamitmarcel@gmail.com</li>
+                    <li class="text-sm">📱 +237 656 585 444 / +237 651 893 950</li>
+                    <li class="text-sm">📍 Douala, Cameroun</li>
+                </ul>
+                <!-- Réseaux sociaux -->
+                <div class="flex space-x-4 mt-4">
+                    
+                    <a href="https://github.com/Marcel-yt" class="hover:text-[#ff6636] transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marcel-yami-tientcheu" class="hover:text-[#ff6636] transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/237656585444" class="text-white hover:text-[#ff6636] transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M20.472 3.528C18.208 1.264 15.208 0 12 0 5.488 0 0 5.488 0 12c0 2.136.576 4.208 1.664 6.032L0 24l6.064-1.592c1.752.96 3.736 1.472 5.736 1.472h.048c6.512 0 12-5.488 12-12 0-3.208-1.264-6.208-3.376-8.472zM12 22.08h-.048c-1.768 0-3.504-.48-5.016-1.384l-.36-.216-3.712.976.992-3.632-.232-.376C2.592 15.776 2.064 13.92 2.064 12c0-5.472 4.464-9.936 9.984-9.936 2.688 0 5.208 1.048 7.104 2.944s2.944 4.416 2.944 7.104c0 5.52-4.488 9.968-10.096 9.968zM17.472 14.752c-.304-.152-1.784-.88-2.064-.976-.272-.096-.472-.144-.672.144-.2.288-.768.976-.944 1.176-.176.2-.352.232-.656.08-.304-.152-1.28-.472-2.44-1.504-.904-.808-1.512-1.808-1.688-2.112-.176-.304-.016-.472.136-.624.136-.136.304-.352.456-.528.152-.176.208-.304.312-.504.104-.2.048-.376-.024-.528-.072-.152-.672-1.624-.92-2.224-.24-.584-.488-.504-.672-.504-.176 0-.376-.024-.576-.024s-.528.072-.808.36c-.272.288-1.04 1.016-1.04 2.48 0 1.464 1.064 2.88 1.216 3.08.152.2 2.144 3.272 5.192 4.584.728.312 1.296.504 1.736.648.728.232 1.392.2 1.92.12.584-.08 1.784-.728 2.032-1.432.248-.704.248-1.304.176-1.432-.072-.128-.272-.208-.576-.36z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center mt-8 pt-8 border-t border-white/20 px-4 sm:px-0">
+            <p class="text-sm">&copy; 2025 Marcel YAMI.Brain Nova - Tous droits réservés.</p>
+        </div>
+    </footer>
+</html>
+<script>
+    // Toggle mobile menu
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Carousel automatique
+    const carouselContent = document.querySelector('.carousel-content');
+    const slides = carouselContent.children;
+    let currentIndex = 0;
+    const slideHeight = slides[0].offsetHeight;
+
+    function moveSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        carouselContent.style.transform = `translateY(-${currentIndex * slideHeight}px)`;
+    }
+
+    // Initialisation du premier slide
+    slides[0].classList.add('active');
+
+    // Démarrer le carousel avec une transition toutes les 3 secondes
+    setInterval(moveSlide, 3000);
+</script>
