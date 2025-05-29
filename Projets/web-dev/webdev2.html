@@ -21,20 +21,11 @@
             <div class="p-8">
                 <div class="flex flex-col md:flex-row gap-8">
                     <!-- Vidéo/Image du projet -->
-                    <div class="md:w-1/2 space-y-4">
-                        <img 
-                            src="../../assets/images/Gtask.png" 
-                            alt="Aperçu de Task Manager" 
-                            class="w-full h-auto rounded-lg shadow-lg"
-                        >
-                        <iframe 
-                            class="w-full h-[300px] rounded-lg shadow-lg" 
-                            src="https://youtu.be/kaUxgwqlt9w" 
-                            title="Task Manager Demo"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen
-                        ></iframe>
+                    <div class="md:w-1/2">
+                        <video class="w-full h-auto rounded-lg shadow-lg" width="100%" autoplay loop playsinline poster="../../assets/images/Gtask.png">
+                            <source src="../../assets/images/taskvid.mp4" type="video/mp4">
+                            <img src="../../assets/images/Gtask.png" alt="Aperçu de Task Manager" class="w-full h-auto rounded-lg shadow-lg">
+                        </video>                          
                     </div>
 
                     <!-- Informations du projet -->
