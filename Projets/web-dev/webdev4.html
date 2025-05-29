@@ -21,21 +21,11 @@
             <div class="p-8">
                 <div class="flex flex-col md:flex-row gap-8">
                     <!-- Vidéo/Image du projet -->
-                    <!-- Vidéo/Image du projet -->
-                    <div class="md:w-1/2 space-y-4">
-                        <img 
-                            src="../../assets/images/house.png" 
-                            alt="Aperçu de Task Manager" 
-                            class="w-full h-auto rounded-lg shadow-lg"
-                        >
-                        <iframe 
-                            class="w-full h-[300px] rounded-lg shadow-lg" 
-                            src="https://youtu.be/2sE0ivWO31g" 
-                            title="Task Manager Demo"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen
-                        ></iframe>
+                    <div class="md:w-1/2">
+                        <video class="w-full h-auto rounded-lg shadow-lg" width="100%" controls loop playsinline poster="../../assets/images/house.png">
+                            <source src="../../assets/images/housevid.mp4" type="video/mp4">
+                            <img src="../../assets/images/house.png" alt="Aperçu de Task Manager" class="w-full h-auto rounded-lg shadow-lg">
+                        </video>                          
                     </div>
 
                     <!-- Informations du projet -->
@@ -50,6 +40,7 @@
                         <div class="mb-6">
                             <h2 class="text-xl font-semibold mb-3">Technologies utilisées</h2>
                             <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600">Figma</span>
                                 <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600">HTML5</span>
                                 <span class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600">CSS3</span>
                             </div>
